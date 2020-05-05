@@ -1,7 +1,7 @@
 import React from 'react';
 import ApiService from '../ApiService';
 
-const Valuation = () => {
+const CompanyToValuate = () => {
 
   const companySearch = () => {
     ApiService.getCompanyData('BABA').then(data => console.log("data", data) || data)
@@ -15,4 +15,4 @@ const Valuation = () => {
     </div>
   );
 }
-export default Valuation;
+export default CompanyToValuate;

@@ -4,7 +4,8 @@ import './App.css';
 import NotFoundPage from './components/NotFoundPage';
 import Header from './components/Header';
 import Dashboard from './components/Dashboard';
-import Valuation from './components/Valuation';
+import CompanyToValuate from './components/CompanyToValuate';
+import ConclusionValuation from './components/ConclusionValuation';
 
 const App = () => (
   <BrowserRouter>
@@ -12,7 +13,8 @@ const App = () => (
       <Header/>
       <Switch>
         <Route path="/" component={Dashboard} exact={true} />
-        <Route path="/valuate" component={Valuation} />
+        <Route path="/valuate" component={CompanyToValuate} />
+        <Route path="/valuate/results" component={ConclusionValuation} />
         <Route component={NotFoundPage} />
       </Switch>
     </div>
