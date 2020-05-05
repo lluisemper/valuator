@@ -1,10 +1,19 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import ApiService from '../ApiService';
+import { DataCompanyContext } from '../App';
 
 const CompanyToValuate = () => {
 
+  const dataCompanyContext = useContext(DataCompanyContext)
+
   const companySearch = () => {
-    ApiService.getCompanyData('BABA').then(data => console.log("data", data) || data)
+    ApiService.getCompanyData('BABA').then(response => {
+      console.log(response);
+      dataCompanyContext.dataCompanyDispatch({ type: 'FETCH_SUCCESS', payload: response })
+    })
+    .catch(error => {
+      dataCompanyContext.dataCompanyDispatch({ type: 'FETCH_ERROR' })
+    })
   }
   
   return(
