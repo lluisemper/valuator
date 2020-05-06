@@ -15,9 +15,7 @@ const initialState = {
 
 const reducer = (state, action) => {
 	switch (action.type) {
-		case 'FETCH_SUCCESS':
-      console.log('ooooo', action.payload);
-      
+		case 'FETCH_SUCCESS':      
 			return {
 				loading: false,
 				data: action.payload,

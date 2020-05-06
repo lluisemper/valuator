@@ -1,26 +1,20 @@
-import React, {useContext} from 'react';
-import ApiService from '../ApiService';
+import React, { useState }  from 'react';
+import { companySearch } from '../ApiServiceCalls';
+import {useContext} from 'react';
 import { DataCompanyContext } from '../App';
+
 
 const CompanyToValuate = () => {
 
-  const dataCompanyContext = useContext(DataCompanyContext)
+  const [symbol, setSymbol] = useState('')
+  const dataCompanyContext = useContext(DataCompanyContext);
 
-  const companySearch = () => {
-    ApiService.getCompanyData('BABA').then(response => {
-      console.log(response);
-      dataCompanyContext.dataCompanyDispatch({ type: 'FETCH_SUCCESS', payload: response })
-    })
-    .catch(error => {
-      dataCompanyContext.dataCompanyDispatch({ type: 'FETCH_ERROR' })
-    })
-  }
-  
   return(
     <div>
       <p>fooo</p>
+      <input type="text" onChange={(e) => setSymbol(e.target.value)}/>
       <button className="search-button" type="submit"
-                  onClick={() => companySearch()}>Search</button>
+                  onClick={() => companySearch(symbol, dataCompanyContext)}>Search</button>
     </div>
   );
 }

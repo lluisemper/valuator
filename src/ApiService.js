@@ -14,7 +14,7 @@ export default {
 }
 
 const fetchCompanyData = (search, options) => {
-  const URL_API = `https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/v2/get-financials?symbol=${search}`
+  const URL_API = `https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/v2/get-analysis?symbol=${search}`
   return fetch(`${URL_API}`, options)
     .then(res => res.status <= 400 ? res : Promise.reject(res))
     .then(res => res.status === 200 ? res.json() : res)
