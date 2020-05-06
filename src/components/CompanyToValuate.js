@@ -11,7 +11,6 @@ const CompanyToValuate = () => {
 
   return(
     <div>
-      <p>fooo</p>
       <input type="text" onChange={(e) => setSymbol(e.target.value)}/>
       <button className="search-button" type="submit"
                   onClick={() => companySearch(symbol, dataCompanyContext)}>Search</button>

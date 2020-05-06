@@ -6,31 +6,7 @@ import Header from './components/Header';
 import Dashboard from './components/Dashboard';
 import CompanyToValuate from './components/CompanyToValuate';
 import ConclusionValuation from './components/ConclusionValuation';
-
-const initialState = {
-	loading: true,
-	error: '',
-	data: {}
-}
-
-const reducer = (state, action) => {
-	switch (action.type) {
-		case 'FETCH_SUCCESS':      
-			return {
-				loading: false,
-				data: action.payload,
-				error: ''
-			}
-		case 'FETCH_ERROR':
-			return {
-				loading: false,
-				data: {},
-				error: 'Something went wrong!'
-			}
-		default:
-			return state
-	}
-}
+import { reducer, initialState } from './reducers/fetchReducer';
 
 export const DataCompanyContext = React.createContext();
 
