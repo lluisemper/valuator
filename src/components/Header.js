@@ -1,9 +1,9 @@
 import React from 'react';
+import '../App.css';
 
 const Header = () => (
-  <div>
-    <p>header present</p>
-  </div>
+  <nav className="navbar">foooo
+  </nav>
 );
 
 export default Header;
