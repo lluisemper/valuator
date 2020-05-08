@@ -1,3 +1,15 @@
 .navbar{
-  background-color: aqua;
+  background-color: rgb(54,144,171);
+  height: 64px;
+  width: 100%;
+  display: flex;
+}
+
+.navbar .logo{
+  border-radius: 25px;
+}
+
+.navbar h1{
+  margin: 0 auto;
+  padding-top: 16px;
 }
