@@ -1,10 +1,10 @@
 import React from 'react';
+import '../App.css';
 
 const Dashboard = () => {
 
   return(
-    <div>
-      <h2>empty dashboard</h2>
+    <div className="dashboard">
       
     </div>
   );

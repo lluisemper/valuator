@@ -1,6 +1,6 @@
 .navbar{
   background-color: rgb(54,144,171);
-  height: 64px;
+  height: 10vh;
   width: 100%;
   display: flex;
 }
@@ -12,4 +12,13 @@
 .navbar h1{
   margin: 0 auto;
   padding-top: 16px;
+}
+
+.dashboard {
+  background-image: url('./assets/accounts.jpg'); 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: auto;
+  height: 90vh;
 }
