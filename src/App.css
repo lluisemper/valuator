@@ -3,6 +3,7 @@
   height: 10vh;
   width: 100%;
   display: flex;
+  color: white;
 }
 
 .navbar .logo{
@@ -15,10 +16,18 @@
 }
 
 .dashboard {
-  background-image: url('./assets/accounts.jpg'); 
+  background-image: url('./assets/office.jpg'); 
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: auto;
   height: 90vh;
+}
+
+.dashboard .container {
+  width: 400px;
+  height: 200px;
+  background-color: rgb(54,144,171);
+  opacity: 0.2;
+  border-radius: 25px;
 }
