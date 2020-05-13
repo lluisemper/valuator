@@ -40,10 +40,23 @@
   opacity: 0.5;
   border-radius: 25px;
   margin: 0 10px;
+  transition: 0.5s;
 }
 
 .dashboard .container:hover{
   background-color: white;
   opacity: 0.8;
   transition: 0.5s;
+}
+
+.dashboard .container h4{
+  margin: 6vh 4vh;
+}
+.link-dashboard {
+  text-align: center;
+  margin: 4vh 4vh;
+}
+.link-dashboard .link-text{
+  text-decoration: none;
+
 }
