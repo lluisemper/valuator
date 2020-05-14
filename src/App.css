@@ -47,6 +47,7 @@
   background-color: white;
   opacity: 0.8;
   transition: 0.5s;
+  
 }
 
 .dashboard .container h4{
@@ -58,5 +59,17 @@
 }
 .link-dashboard .link-text{
   text-decoration: none;
+  visibility: hidden;
+  transition: 0.2s;
+  font-weight: bold;
 
+}
+.container:hover .link-dashboard .link-text{
+  text-decoration: none;
+  visibility: visible;
+  color: black;
+  background-color:  rgb(54,144,171);
+  padding: 1vh 2vh;
+  border-radius: 25px;
+  cursor: pointer;
 }
